@@ -1,0 +1,55 @@
+<!--表格组件  -->
+<template name='t-template'>
+  <block wx:for="{{listData2}}" wx:key="key">
+  <!--获取文本内容，取谁data-xxx写谁  -->
+    <view class="tr bg-g" bindtap="actioncnt" data-id="{{item.id}}">
+      <view class="td-h">姓名</view>
+      <view class="td">{{item.name}}</view>
+    </view>
+    <view class="tr" bindtap="actioncnt" data-id="{{item.id}}">
+      <view class="td-h">性别</view>
+      <view class="td">{{item.gender}}</view>
+    </view>
+    <view class="tr bg-g" bindtap="actioncnt" data-id="{{item.id}}">
+      <view class="td-h">民族</view>
+      <view class="td">{{item.nation}}</view>
+    </view>
+    <view class="tr" bindtap="actioncnt" data-id="{{item.id}}">
+      <view class="td-h">出生日期</view>
+      <view class="td">{{item.birth}}</view>
+    </view>
+    <view class="tr bg-g" bindtap="actioncnt" data-id="{{item.id}}">
+      <view class="td-h">学院</view>
+      <view class="td">{{item.college}}</view>
+    </view>
+    <view class="tr" bindtap="actioncnt" data-id="{{item.id}}">
+      <view class="td-h">年级</view>
+      <view class="td">{{item.grade}}</view>
+    </view>
+    <view class="tr bg-g" bindtap="actioncnt" data-id="{{item.id}}">
+      <view class="td-h">班级</view>
+      <view class="td">{{item.clazz}}</view>
+    </view>
+    <view class="tr" bindtap="actioncnt" data-id="{{item.id}}">
+      <view class="td-h">专业</view>
+      <view class="td">{{item.major}}</view>
+    </view>
+    <view class="tr bg-g" bindtap="actioncnt" data-id="{{item.id}}">
+      <view class="td-h">毕业时间</view>
+      <view class="td">{{item.gradtime}}</view>
+    </view>
+    <view class="tr" bindtap="actioncnt" data-id="{{item.id}}">
+      <view class="td-h">所在地</view>
+      <view class="td">{{item.dress}}</view>
+    </view>
+    <view class="tr bg-g" bindtap="actioncnt" data-id="{{item.id}}">
+      <view class="td-h">手机</view>
+      <view class="td">{{item.phone}}</view>
+    </view>
+    
+    <view class="tr tr-last" bindtap="actioncnt" data-id="{{item.id}}">
+      <view class="td-h">学历</view>
+      <view class="td">{{item.edu}}</view>
+    </view>
+  </block>
+</template>

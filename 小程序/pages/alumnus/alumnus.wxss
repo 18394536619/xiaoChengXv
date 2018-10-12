@@ -1,0 +1,66 @@
+/* pages/alumnus/alumnus.wxss */
+@import '../daohang/dao-template';
+@import '../person/tr-template/tr-template';
+@import '../person/t-template/t-template';
+@import '../update/up-template';
+
+.normal2 {
+  width: 40%;
+  justify-content: center;
+  display: flex;
+  height: 90rpx;
+  align-items: center;
+  margin-left: 2px;
+  background: #fff;
+  border-bottom: 2px solid #405f80;
+}
+.submit {
+  border: 1px solid #EDF2FC;
+  height: 85rpx;
+  line-height:85rpx; 
+  border-radius: 10rpx;
+  width: 92.5%;
+  margin: 10rpx 20rpx 10rpx 30rpx;
+  background-color: #ABCDEF;
+  color: #5A5E66
+}
+
+.search-btn {
+  display: flex;
+  flex-direction: row;
+  /* background-color: #abcdef */
+}
+.sea{
+  margin-left: -4rpx; 
+  margin-right: 5rpx;
+  padding: 8rpx;
+  width: 35%; 
+  border: 3px solid #abcdef;
+  height: 60rpx;
+  font-size: 26rpx;
+  /* border-radius: -15rpx; */
+}
+.ser-btn {
+   width: 16%; 
+  height: 85rpx;
+  line-height: 85rpx;
+  margin-top: 10rpx;
+  margin-right: 5rpx;
+  color: #fff;
+   font-size: 26rpx;
+  background-color: #abcdef;
+}
+.grade,.clazz{
+  margin-top: 10rpx;
+  width: 25%; 
+  padding: 8rpx;
+  border: 3px solid #abcdef;
+   margin-left: 5rpx; 
+   margin-right: -5rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  /* border-radius: 10rpx; */
+  font-size: 26rpx;
+  opacity: 0.8;
+  color: #5a5e66;
+}

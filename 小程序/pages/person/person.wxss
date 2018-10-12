@@ -1,0 +1,42 @@
+/* @import './tr-template/tr-template'; */
+@import './t-template/t-template';
+@import '../daohang/dao-template';
+@import '../update/up-template';
+.pwd-text {
+  border: 1px solid #ABCDEF;
+  height: 85rpx;
+  border-radius: 10rpx;
+  width: 92.5%;
+  line-height: 85rpx;
+  margin: 10rpx 20rpx 10rpx 25rpx;
+   opacity: 0.8; 
+  color: #5A5E66;
+}
+.submit{
+  border: 1px solid #EDF2FC;
+  height: 85rpx;
+  line-height:85rpx; 
+  border-radius: 10rpx;
+  width: 92.5%;
+  margin: 10rpx 20rpx 10rpx 26rpx;
+  background-color: #ABCDEF;
+  color: #5A5E66
+}
+.normal1{
+  width: 40%;
+  justify-content: center;
+  display: flex;
+  height: 90rpx;
+  align-items: center;
+  margin-left: 2px;
+  background: #fff;
+  border-bottom: 2px solid #405f80;
+}
+.td {
+    width: 40%;  
+  justify-content: center;
+  text-align: center;
+  height: 2.5rem;
+  color: #5A5E66;
+  line-height: 2.5rem;
+} 

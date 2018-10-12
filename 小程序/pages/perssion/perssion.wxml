@@ -1,0 +1,13 @@
+<!--pages/perssion/persion.wxml-->
+<import src='../daohang/dao-template' />
+<import src='../person/tr-template/tr-template' />
+<block data='{{DohData2}}'>
+  <view catchtap='onlogsTap'>
+    <template is='dao-template' data='{{DohData2}}' />
+  </view>
+</block>
+<block data='{{listData}}'>
+  <view hidden='{{boolean1}}'>
+    <template is='ptemplate' data='{{listData}}' />
+  </view>
+</block>

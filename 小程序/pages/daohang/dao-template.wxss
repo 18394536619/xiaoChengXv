@@ -1,0 +1,18 @@
+.th-h {
+  width: 40%;
+  justify-content: center;
+  background: #ededed;
+  display: flex;
+  height: 90rpx;
+  align-items: center;
+  margin-left: 2px;
+}
+.tr-h {
+  opacity: 0.6;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 90rpx;
+  align-items: center;
+  margin-bottom: 2px;
+}

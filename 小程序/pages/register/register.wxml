@@ -1,0 +1,40 @@
+<view class='container'>
+  <view class='per-head'>
+    <swiper class='swiper' indicator-dots='true' autoplay='true' interval='4000' indicator-active-color='#fff'>
+      <swiper-item>
+        <image src='../../image/wx1.png' class='image' class='per-image'></image>
+      </swiper-item>
+      <swiper-item>
+        <image src='../../image/wx3.png' class='image' class='per-image'></image>
+      </swiper-item>
+      <swiper-item>
+        <image src='../../image/wx7.png' class='image' class='per-image'></image>
+      </swiper-item>
+      <swiper-item>
+        <image src='../../image/wx9.png' class='image' class='per-image'></image>
+      </swiper-item>
+    </swiper>
+    <!-- <image src='../../image/wx3.png' class='per-image'></image> -->
+  </view>
+  <view class='login-head'>
+    <text>欢迎注册</text>
+  </view>
+  <view class='content'>
+    <form bindreset="formReset">
+      <view class="tab2">
+        <input class="idText" bindinput="userNameInput" type="text" id="username" name="username" placeholder="姓名" />
+        <text class="tips">{{userNameTip}}</text>
+        <input class="password" bindinput="userPasswordInput" type="password" id="password" name="password" placeholder="密码" />
+        <text class="tips">{{userPasswordTip}}</text>
+        <input class="idText" maxlength="11" bindinput="phoneInput" type="text" id="phone" name="phone" placeholder="手机号" autocomplete="off" />
+        <text class="tips">{{phoneTip}}</text>
+        <input class="collText" bindinput="collInput" type="text" id="collname" name="collname" placeholder="学院" />
+        <text class="tips">{{collNameTip}}</text>
+      </view>
+      <view class='erro'>{{info}}</view>
+      <button class="login" bindtap="oLogin" formType="reset">注册</button>
+    </form>
+  </view>
+  
+  <!-- <button class="login" bindtap="oLogin">注册</button> -->
+</view>

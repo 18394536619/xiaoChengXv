@@ -1,0 +1,50 @@
+/* pages/person/template/template.wxss */
+ @import '../th-template/th-template'; 
+.table {
+  border: 0px solid darkgray;
+  font-size: 30rpx;
+  border-bottom: 2px solid #ededed;
+}
+.bg-w{
+  background: snow;
+}
+.t-head{
+  background: #ABCDEF;
+}
+.th {
+  /* 表头颜色 */
+  width: 40%;
+  justify-content: center;
+  background: #ABCDEF;
+  display: flex;
+  height: 2.5rem;
+  align-items: center;
+  color: #fff
+}
+.checkbx-h{
+  width: 40rpx;
+  margin-left: 18rpx;
+}
+/* .search-btn{
+  display: flex;
+  flex-direction: row;
+}
+.search{
+  margin-left: 10rpx;
+  width: 76%;
+  border: 1px solid #ABCDEF;
+  height: 75rpx;
+  font-size: 36rpx;
+}
+.ser-btn{
+  width: 20%;
+  height: 77rpx;
+  line-height: 75rpx;
+  margin-top: 10rpx;
+  color: #ffffff;
+  background-color: #ABCDEF
+} */
+.hcoll{
+  width: 450rpx;
+  margin-left: -50rpx;  
+}

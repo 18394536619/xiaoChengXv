@@ -1,0 +1,35 @@
+{
+  "pages": [
+    
+    "pages/logs/logs",
+    "pages/register/register",
+    "pages/person/person",
+    "pages/alumnus/alumnus",
+    "pages/index/index",
+    "pages/perssion/perssion" 
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#405f80"
+  },
+  "tabBar": {
+    "position": "bottom",
+    "backgroundColor":"#405f80",
+    "color":"#fff",
+    "selectedColor":"#EB9E05",
+    "list": [
+      {
+        "iconPath":"image/dingxing.png",
+        "selectedIconPath": "image/dingxing.png",
+        "pagePath": "pages/logs/logs",
+        "text": "登录"
+      },
+      {
+        "iconPath": "image/reg.png",
+        "selectedIconPath": "image/reg.png",
+        "pagePath": "pages/register/register",
+        "text": "注册"
+      }
+    ]
+  }
+}

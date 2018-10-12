@@ -1,0 +1,24 @@
+<!--表格组件  -->
+<template name='th-template'>
+  <block wx:for="{{listData}}" wx:key="key">
+    <view class="tr " wx:if="{{index % 2 == 0}}" >
+      <view class="checkbx">
+        <checkbox value="{{item.id}}" checked="{{item.checked}}"/>
+      </view>
+      <!--获取文本内容  -->
+      <view class="td" bindtap="actioncnt" data-id="{{item.id}}">{{item.name}}</view>
+      <view class="td" bindtap="actioncnt" data-id="{{item.id}}">{{item.gender}}</view>
+      <view class="td coll" bindtap="actioncnt" data-id="{{item.id}}">{{item.college}}</view>
+      <view class="td time" bindtap="actioncnt" data-id="{{item.id}}">{{item.gradtime}}</view>
+    </view>
+    <view class="tr bg-g" wx:else bindtap="bindTr">
+      <view class="checkbx">
+        <checkbox value="{{item.id}}" checked="{{item.checked}}"/>
+      </view>
+      <view class="td" bindtap="actioncnt" data-id="{{item.id}}">{{item.name}}</view>
+      <view class="td" bindtap="actioncnt" data-id="{{item.id}}">{{item.gender}}</view>
+      <view class="td coll" bindtap="actioncnt" data-id="{{item.id}}">{{item.college}}</view>
+      <view class="td time" bindtap="actioncnt" data-id="{{item.id}}">{{item.gradtime}}</view>
+    </view>
+  </block>
+</template>

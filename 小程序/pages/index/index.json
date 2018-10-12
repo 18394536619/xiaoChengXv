@@ -1,0 +1,7 @@
+{
+  "backgroundColor": "#e6f3f9",
+  "navigationBarBackgroundColor": "#405f80",
+  "navigationBarTitleText": "校友组织管理",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": true
+}

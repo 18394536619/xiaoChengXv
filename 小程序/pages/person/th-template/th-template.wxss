@@ -1,0 +1,36 @@
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 2.5rem;
+  align-items: center;
+}
+
+.td {
+  width: 40%;
+  justify-content: center;
+  text-align: center;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  color: #5A5E66;
+  /* border-left: 1px solid #ededed; */
+}
+.bg-g {
+  background: #EDF2FC;
+}
+
+.checkbx {
+  margin-left: 10rpx;
+}
+
+.time {
+  width: 400rpx;
+  margin-left: -10rpx;
+  margin-right: 14rpx;
+}
+
+.coll {
+  width: 450rpx;
+  margin-left: -10rpx;
+   margin-right: 14rpx;  
+}

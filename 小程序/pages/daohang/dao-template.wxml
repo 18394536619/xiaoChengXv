@@ -1,0 +1,20 @@
+<template name="dao-template">
+    <view>
+      <view class="tr-h">
+      
+        <view class="th-h normal1">
+          <text bindtap='bindPersion'>个人信息</text>
+        </view>
+        <view class="th-h normal2">
+          <text bindtap="tapAlumnus">校友信息</text>
+        </view>
+        <view class="th-h normal3">
+          <text bindtap='bindPe'>校友组织</text>
+        </view>
+        <view class="th-h normal4" wx:if="{{DohData2[0].state==2}}">
+          <text bindtap='permission'>权限管理</text>
+        </view>
+      </view>
+    </view>
+
+</template>

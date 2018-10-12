@@ -1,0 +1,44 @@
+<!--logs.wxml-->
+<view class='container'>
+  <view class='per-head'>
+    <swiper class='swiper' indicator-dots='true' autoplay='true' interval='4000' indicator-active-color='#fff'>
+      <swiper-item>
+        <image src='../../image/wx1.png' class='image' class='per-image'></image>
+      </swiper-item>
+      <swiper-item>
+        <image src='../../image/wx3.png' class='image' class='per-image'></image>
+      </swiper-item>
+      <swiper-item>
+        <image src='../../image/wx7.png' class='image' class='per-image'></image>
+      </swiper-item>
+      <swiper-item>
+        <image src='../../image/wx9.png' class='image' class='per-image'></image>
+      </swiper-item>
+    </swiper>
+    <!-- <image src='../../image/wx1.png' class='per-image'></image> -->
+  </view>
+  <view class='login-head'>
+    <text>欢迎登录</text>
+  </view>
+  <view class='content'>
+    <form bindreset="formReset">
+      <view class="section">
+        <input name='userName' bindinput="userNameInput" placeholder="请输入您的名字" auto-focus/>
+        <text class="tips">{{userNameTip}}</text>
+      </view>
+      <view class="section">
+        <input name='Phone' type="text" maxlength="11" bindinput="phoneInput" placeholder="请输入电话号码" autocomplete="off" />
+        <text class="tips">{{phoneTip}}</text>
+      </view>
+
+      <view class="section">
+        <input name='Password' type="password" bindinput="passwordInput" placeholder="请输入密码" auto-focus/>
+        <text class="tips">{{userPasswordTip}}</text>
+      </view>
+        
+       <button formType="reset" bindtap="loginTap" class='login'> 提交 </button>
+       
+    </form>
+    <p class="text" bindtap="forget">忘记密码</p>
+  </view>
+</view>

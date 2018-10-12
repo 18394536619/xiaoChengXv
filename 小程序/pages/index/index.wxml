@@ -1,0 +1,147 @@
+<!--index.wxml-->
+<import src='../daohang/dao-template' />
+<block data='{{DohData2}}'>
+  <view catchtap='onlogsTap'>
+    <template is='dao-template' data='{{DohData2}}' />
+  </view>
+</block>
+<!--展示 -->
+<view class='search-btn'>
+  <input class='search' name='Search' type="text" bindinput="searchInput" placeholder="请重新输入关键字" auto-focus/>
+  <button class='ser-btn' bindtap="searchs">搜索</button>
+</view>
+<view class="table" hidden="{{boolean1}}">
+  <checkbox-group bindchange="checkboxChange">
+    <view class="tr t-head">
+      <view class="checkbx-h th">
+        <checkbox value="{{}}" />
+      </view>
+      <view class="th">组对名</view>
+      <view class="th ">所在省</view>
+      <view class="th">所在市</view>
+      <view class="th time">组建时间</view>
+      <view class="th">成员数</view>
+    </view>
+    <block wx:for="{{groupData}}" wx:key="key">
+      <view class="tr" wx:if="{{index % 2 == 0}}">
+        <view class="checkbx">
+          <checkbox value="{{item.id}}" checked="{{item.checked}}" />
+        </view>
+        <!--获取文本内容  -->
+        <view class="td" bindtap="actioncnt" data-id="{{item.id}}">{{item.groupname}}</view>
+        <view class="td" bindtap="actioncnt" data-id="{{item.id}}">{{item.province}}</view>
+        <view class="td" bindtap="actioncnt" data-id="{{item.id}}">{{item.city}}</view>
+        <view class="td time" bindtap="actioncnt" data-id="{{item.id}}">{{item.foundtime}}</view>
+        <view class="td" bindtap="actioncnt" data-id="{{item.id}}">{{item.mem}}</view>
+      </view>
+      <view class="tr bg-g" bindtap="bindTr" wx:else>
+        <view class="checkbx">
+          <checkbox value="{{item.id}}" checked="{{item.checked}}" />
+        </view>
+        <view class="td" bindtap="actioncnt" data-id="{{item.id}}">{{item.groupname}}</view>
+        <view class="td" bindtap="actioncnt" data-id="{{item.id}}">{{item.province}}</view>
+        <view class="td" bindtap="actioncnt" data-id="{{item.id}}">{{item.city}}</view>
+        <view class="td time" bindtap="actioncnt" data-id="{{item.id}}">{{item.foundtime}}</view>
+        <view class="td" bindtap="actioncnt" data-id="{{item.id}}">{{item.mem}}</view>
+      </view>
+    </block>
+  </checkbox-group>
+</view>
+<!--修改  -->
+<view hidden="{{boolean2}}">
+  <block wx:for="{{upData}}" wx:key="key">
+    <view class="trr" bindtap="actioncn" data-id="{{item.id}}">
+      <input name='Name' type="text" bindinput="nameInput" placeholder="请输入组名" value="{{item.groupname}}" auto-focus/>
+      <!-- <text class="tips">{{nameTip}}</text> -->
+    </view>
+    <view class="trr" bindtap="actioncn" data-id="{{item.id}}">
+      <input name='Province' type="text" bindinput="provinceInput" placeholder="请输入所在省" value="{{item.province}}" auto-focus/>
+    </view>
+    <view class="trr" bindtap="actioncn" data-id="{{item.id}}">
+      <input name='City' type="text" bindinput="cityInput" placeholder="请输入所在市" value="{{item.city}}" auto-focus/>
+    </view>
+    <view class="input" bindtap="actioncn" data-id="{{item.id}}">
+      <picker bindchange="foundInput" mode="date" value="{{item.foundtime}}" start="1990-01-01" end="2018-12-30">
+        <view class="picker">
+          {{Foundtime}}
+        </view>
+      </picker>
+    </view>
+    <view class="trr" bindtap="actioncn" data-id="{{item.id}}">
+      <input name='Mem' type="text" bindinput="memInput" placeholder="请输入成员数" value="{{item.mem}}" auto-focus/>
+    </view>
+    <view class="tr">
+      <input class="input" name='Leader' type="text" bindinput="leaderInput" value="{{item.Leader}}" auto-focus/>
+    </view>
+    <!-- </block> -->
+    <view class="tr">
+      <button bindtap="queding" class='queding'>确定</button>
+    </view>
+  </block>
+</view>
+<!--添加  -->
+<view hidden="{{boolean3}}">
+  <form bindreset="formReset">
+    <view class="tr">
+      <!-- <view class="td-h">组名</view> -->
+      <input class="input" name='Name' type="text" bindinput="nameInput" placeholder="请输入组名" auto-focus/>
+    </view>
+    <view class="tr">
+      <!-- <view class="td-h">所在省</view> -->
+      <input class="input" name='Province' type="text" bindinput="provinceInput" placeholder="请输入所在省" auto-focus/>
+    </view>
+    <view class="tr">
+      <!-- <view class="td-h">所在市</view> -->
+      <input class="input" name='City' type="text" bindinput="cityInput" placeholder="请输入所在市" auto-focus/>
+    </view>
+    <view class="tr">
+      <!-- <view class="td-h">成员数</view> -->
+      <input class="input" name='Mem' type="text" bindinput="memInput" placeholder="请输入成员数" auto-focus/>
+    </view>
+    <view class="input">
+      <picker bindchange="foundInput" mode="date" value="{{item.foundtime}}" start="1990-01-01" end="2018-12-30">
+        <view class="picker">
+          {{Foundtime}}
+        </view>
+      </picker>
+    </view>
+    <view class="tr">
+      <!-- <view class="td-h">组长</view> -->
+      <input class="input" name='Leader' type="text" bindinput="leaderInput" placeholder="请输入联系人" auto-focus/>
+    </view>
+    <button formType="reset" bindtap='submit' class='submit'>确定</button>
+  </form>
+</view>
+<!--显示查看内容-->
+<view hidden="{{boolean4}}" class="table">
+  <block wx:for="{{chData}}" wx:key="key">
+    <view class="tr bg-g" bindtap="actioncnt" data-id="{{item.id}}">
+      <view class="td-h">组名</view>
+      <view class="td">{{item.groupname}}</view>
+    </view>
+    <view class="tr" bindtap="actioncnt" data-id="{{item.id}}" wx:if="{{index % 2 == 0}}">
+      <view class="td-h">所在省</view>
+      <view class="td">{{item.province}}</view>
+    </view>
+    <view class="tr bg-g" bindtap="actioncnt" data-id="{{item.id}}">
+      <view class="td-h">所在市</view>
+      <view class="td">{{item.city}}</view>
+    </view>
+    <view class="tr" bindtap="actioncnt" data-id="{{item.id}}" wx:if="{{index % 2 == 0}}">
+      <view class="td-h">组建时间</view>
+      <view class="td">{{item.foundtime}}</view>
+    </view>
+    <view class="tr bg-g" bindtap="actioncnt" data-id="{{item.id}}">
+      <view class="td-h">成员数</view>
+      <view class="td">{{item.mem}}</view>
+    </view>
+    <view class="tr" wx:if="{{index % 2 == 0}}">
+      <view class="td-h">联系人</view>
+      <view class="td">{{leaderData}}</view>
+    </view>
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td-h">联系电话</view>
+      <view class="td">{{Phone}}</view>
+    </view>
+  </block>
+</view>

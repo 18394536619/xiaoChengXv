@@ -1,0 +1,20 @@
+class Alumnus{
+	constructor(id,name,gender,nation,birth,gradtime,college,grade,clazz,dress,phone,major,edu,password,state=0){
+		this.id=id;
+		this.name=name;
+		this.gender=gender;
+		this.nation=nation;
+		this.birth=birth;
+		this.gradtime=gradtime;
+		this.college=college;
+		this.dress=dress;
+		this.phone=phone;
+		this.major=major;
+		this.edu=edu;
+		this.grade=grade;
+		this.clazz=clazz;
+		this.password=password;
+		this.state=state;
+	}
+}
+module.exports=Alumnus;

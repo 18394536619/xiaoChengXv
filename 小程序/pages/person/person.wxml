@@ -1,0 +1,101 @@
+
+<import src='./t-template/t-template' />
+<import src='../daohang/dao-template' />
+<block data='{{DohData2}}'>
+  <view catchtap='onlogsTap'>
+    <template is='dao-template' data='{{DohData2}}' />
+  </view>
+</block>
+<!-- {{listData2}} -->
+<block data='{{listData2}}'>
+  <view catchtap='onlogsTap' hidden='{{boolean1}}'>
+    <template is='t-template' data='{{listData2}}' />
+  </view>
+</block>
+<!--修改  -->
+<view hidden='{{boolean2}}'>
+  <block wx:for="{{upData}}" wx:key="key" >
+    <!--获取文本内容，取谁data-xxx写谁  -->
+
+    <view class="trr" bindtap="actioncn" data-id="{{item.id}}">
+      <input name='Name' type="text" bindinput="nameInput" placeholder="请输入姓名" value="{{item.name}}" auto-focus/>
+      <text class="tips">{{nameTip}}</text>
+    </view>
+    <view class="trr" bindtap="actioncn" data-id="{{item.id}}">
+      <input name='Gender' type="text" bindinput="genderInput" placeholder="请输入性别" value="{{item.gender}}" auto-focus/>
+    </view>
+    <view class="trr" bindtap="actioncn" data-id="{{item.id}}">
+      <input name='Nation' type="text" bindinput="nationInput" placeholder="请输入民族" value="{{item.nation}}" auto-focus/>
+    </view>
+    <!--日期  -->
+    <view class="input" bindtap="actioncn" data-id="{{item.id}}">
+      <picker bindchange="birthInput" mode="date" value="{{item.birth}}" start="1990-01-01" end="2018-12-30">
+        <view class="picker">
+          {{Birth}}
+        </view>
+      </picker>
+    </view>
+
+    <view class="trr" bindtap="actioncn" data-id="{{item.id}}">
+      <input name='College' type="text" bindinput="collegeInput" placeholder="请输入所在学院" value="{{item.college}}" auto-focus/>
+      <text class="tips">{{collegeTip}}</text>
+    </view>
+    <!--年级  -->
+    <view class="input" bindtap="actioncn" data-id="{{item.id}}">
+      <picker bindchange="bindGradeChange" value="{{index0}}" range="{{Grade}}">
+        <view class="picker">
+         {{Grade[index0]}}
+        </view>
+      </picker>
+    </view>
+    <!--班级  -->
+    <view class="input" bindtap="actioncn" data-id="{{item.id}}">
+      <picker bindchange="bindClazzChange" value="{{index1}}" range="{{Clazz}}">
+        <view class="picker">
+          {{Clazz[index1]}}
+        </view>
+      </picker>
+    </view>
+    <view class="input" bindtap="actioncn" data-id="{{item.id}}">
+      <picker bindchange="gradtimeInput" mode="date" value="{{item.gradtime}}" start="1990-01-01" end="2018-12-30">
+        <view class="picker">
+          {{Gradtime}}
+        </view>
+      </picker>
+    </view>
+    <view class="trr" bindtap="actioncn" data-id="{{item.id}}">
+      <input name='Dress' type="text" bindinput="dressInput" placeholder="请输入所在地" value="{{item.dress}}" auto-focus/>
+    </view>
+    <view class="trr" bindtap="actioncn" data-id="{{item.id}}">
+      <input name='Phone' type="text" maxlength="11" bindinput="phoneInput" placeholder="请输入电话号码" value="{{item.phone}}" autocomplete="off" />
+      <text class="tips">{{phoneTip}}</text>
+    </view>
+    <view class="trr" bindtap="actioncn" data-id="{{item.id}}">
+      <input name='Major' type="text" bindinput="majorInput" placeholder="请输入专业" value="{{item.major}}" auto-focus/>
+    </view>
+    <view class="trr" bindtap="actioncn" data-id="{{item.id}}">
+      <input name='Edu' type="text" bindinput="eduInput" placeholder="请输入学历" value="{{item.edu}}" auto-focus/>
+    </view>
+    <view class="trr" bindtap="actioncn" data-id="{{item.id}}">
+    </view>
+    <view class="tr">
+      <button bindtap="queding" class='queding'>确定</button>
+    </view>
+  </block>
+</view>
+
+<view hidden='{{boolean4}}' class='pwd-text'>
+  原始密码：
+  <text>{{listData2[0].password}}</text>
+</view>
+<view hidden='{{boolean3}}'>
+  <form bindreset="formReset">
+    <view>
+      <input name='Password' type="text" bindinput="passwordInput" placeholder="请输入新的密码" auto-focus/>
+    </view>
+    <view>
+      <input name='Repassword' type="text" bindinput="repasswordInput" placeholder="请重新输入密码" auto-focus/>
+    </view>
+    <button formType="reset" bindtap='submit' class='submit'>提交</button>
+  </form>
+</view>

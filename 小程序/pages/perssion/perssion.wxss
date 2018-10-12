@@ -1,0 +1,40 @@
+/* pages/perssion/persion.wxss */
+@import '../daohang/dao-template';
+@import '../person/tr-template/tr-template';
+
+.normal4 {
+  width: 40%;
+  justify-content: center;
+  display: flex;
+  height: 90rpx;
+  align-items: center;
+  margin-left: 2px;
+  background: #fff;
+  border-bottom: 2px solid #405f80;
+}
+
+input, .queding {
+  border: 1px solid #ccc;
+  height: 85rpx;
+  border-radius: 10rpx;
+  width: 92.5%;
+  margin: 10rpx 20rpx 10rpx 25rpx;
+  opacity: 0.6;
+}
+
+.td {
+  /* width:45%; */
+  justify-content: center;
+  text-align: center;
+}
+
+.td-h {
+  width: 35%;
+  justify-content: center;
+  text-align: left;
+  padding-left: 50rpx;
+}
+
+.bg-g {
+  background: #edf2fc;
+}

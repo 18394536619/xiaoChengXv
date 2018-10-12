@@ -1,0 +1,31 @@
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 2.5rem;
+  align-items: center;
+}
+.tr-last{
+  border-bottom: 2px solid #ededed;
+}
+.td {
+   /* width: 40%;  */
+  justify-content: center;
+  text-align: center;
+  height: 2.5rem;
+  color: #5A5E66;
+  line-height: 2.5rem;
+}
+ .td-h {
+  margin-left: 100rpx;
+  width: 260rpx;
+  color: #5A5E66;
+} 
+
+.bg-g {
+  background: #e6f3f9;
+}
+
+.checkbx {
+  margin-left: 10rpx;
+}

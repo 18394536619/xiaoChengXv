@@ -1,0 +1,135 @@
+/**index.wxss**/
+@import '../daohang/dao-template';
+
+.table {
+  border: 0px solid darkgray;
+  font-size: 30rpx;
+  border-bottom: 2px solid #ededed;
+}
+
+.bg-w {
+  background: snow;
+}
+
+.t-head {
+  background: #abcdef;
+}
+
+.th {
+  width: 40%;
+  justify-content: center;
+  background: #abcdef;
+  display: flex;
+  height: 2.5rem;
+  color: #fff;
+  font-size: 30rpx;
+  align-items: center;
+}
+
+.checkbx-h {
+  width: 40rpx;
+  margin-left: 18rpx;
+}
+
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 2.5rem;
+  align-items: center;
+}
+
+.td {
+  width: 40%;
+  font-size: 30rpx;
+  justify-content: center;
+  text-align: center;
+  color: #5a5e66;
+}
+
+.bg-g {
+  background: #e6f3f9;
+}
+
+.checkbx {
+  margin-left: 10rpx;
+}
+
+input ,.input{
+  border: 1px solid #abcdef;
+  height: 85rpx;
+  border-radius: 10rpx;
+  width: 92.5%;
+  margin: 10rpx 20rpx 10rpx 25rpx;
+  opacity: 0.8;
+  color: #5a5e66;
+}
+
+.queding {
+  border: 1px solid #edf2fc;
+  height: 85rpx;
+  line-height: 85rpx;
+  border-radius: 10rpx;
+  width: 92.5%;
+  margin: 10rpx 20rpx 10rpx 20rpx;
+  background-color: #abcdef;
+  color: #5a5e66;
+}
+
+.submit {
+  border: 1px solid #edf2fc;
+  height: 85rpx;
+  line-height: 85rpx;
+  border-radius: 10rpx;
+  width: 92.5%;
+  margin: 10rpx 20rpx 10rpx 30rpx;
+  background-color: #abcdef;
+  color: #5a5e66;
+}
+
+.td-h {
+  margin-left: 100rpx;
+  width: 180rpx;
+  color: #5a5e66;
+}
+
+.search-btn {
+  display: flex;
+  flex-direction: row;
+}
+
+.search {
+  margin-left: 5rpx;
+  margin-right: 5rpx;
+  padding: 8rpx;
+  width: 85%; 
+  border: 3px solid #abcdef;
+  height: 60rpx;
+  font-size: 26rpx;
+}
+
+.ser-btn {
+   width: 16%; 
+  height: 85rpx;
+  line-height: 85rpx;
+  margin-top: 10rpx;
+  margin-right: 5rpx;
+  color: #fff;
+   font-size: 26rpx;
+  background-color: #abcdef;
+}
+
+.time {
+  width: 400rpx;
+}
+
+.normal3 {
+  width: 40%;
+  justify-content: center;
+  display: flex;
+  height: 90rpx;
+  align-items: center;
+  margin-left: 2px;
+  background: #fff;
+  border-bottom: 2px solid #405f80;
+}

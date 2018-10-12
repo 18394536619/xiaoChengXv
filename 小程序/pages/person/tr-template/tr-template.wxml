@@ -1,0 +1,25 @@
+<!--表头组件  -->
+<import src='../th-template/th-template' />
+<template name='ptemplate'>
+  <view class="table">
+  <!-- <view class='search-btn'>
+    <input class='search' name='Search' type="text" bindinput="searchInput" placeholder="请重新输入关键字" auto-focus/><button class='ser-btn' bindtap="searchs">搜索</button>
+  </view> -->
+    <checkbox-group bindchange="checkboxChange">
+      <view class="tr t-head">
+        <view class="checkbx-h th">
+          <checkbox value="{{}}" />
+        </view>
+        <view class="th">姓名</view>
+        <view class="th ">性别</view>
+        <view class="th hcoll">学院</view>
+        <view class="th time">毕业时间</view>
+      </view>
+      <block data='{{listData}}'>
+        <view>
+          <template is='th-template' data='{{listData}}' />
+        </view>
+      </block>
+    </checkbox-group>
+  </view>
+</template>

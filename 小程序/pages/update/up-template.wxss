@@ -1,0 +1,20 @@
+
+input,.input{
+  border: 1px solid #ABCDEF;
+  height: 85rpx;
+  border-radius: 10rpx;
+  width: 92.5%;
+  margin: 10rpx 20rpx 10rpx 25rpx;
+   opacity: 0.8; 
+  color: #5A5E66;
+}
+.queding {
+  border: 1px solid #EDF2FC;
+  height: 85rpx;
+  line-height:85rpx; 
+  border-radius: 10rpx;
+  width: 92.5%;
+  margin: 10rpx 20rpx 10rpx 18rpx;
+  background-color: #ABCDEF;
+  color: #5A5E66
+}
